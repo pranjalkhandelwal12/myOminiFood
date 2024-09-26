@@ -416,6 +416,54 @@ textarea{
 
 *:focus{outline: none;}
 
+.section-map {
+    background-color: #f7f7f7;
+    padding: 60px 0;
+}
+
+.map-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+.map-text {
+    font-size: 18px;
+    color: #555;
+}
+
+.map-text h3 {
+    font-size: 24px;
+    color: #333;
+}
+
+.map-text p {
+    margin: 5px 0;
+}
+
+@media (min-width: 768px) {
+    .map-box {
+        flex-direction: row;
+    }
+    #map {
+        width: 50%;
+        height: 400px;
+    }
+    .map-text {
+        width: 50%;
+        padding-left: 30px;
+    }
+}
+
+
 footer{
     background-color: #815858;
     padding: 45px;
