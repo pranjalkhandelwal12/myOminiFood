@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <link rel="stylesheet" type="text/css" href="resources/css/style.css">
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
+        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
     </head>
     <body></body>
         <header>
@@ -359,6 +360,36 @@
                 </form>
             </div>
         </section>
+     <section class="section-map js--section-map" id="location">
+            <div class="row">
+                <h2>Find Us Here</h2>
+            </div>
+            <div class="row">
+                <div class="map-box">
+                    <div id="map"></div>
+                    <div class="map-text">
+                        <h3>OmniFood Restaurant</h3>
+                        <p>123 Healthy Street, Food City, FC 45678</p>
+                        <p>Open daily from 8am to 10pm</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <script>
+            function initMap() {
+                var restaurantLocation = {lat: 40.712776, lng: -74.005974}; // Change to the restaurant's actual coordinates
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 15,
+                    center: restaurantLocation
+                });
+                var marker = new google.maps.Marker({
+                    position: restaurantLocation,
+                    map: map
+                });
+            }
+            google.maps.event.addDomListener(window, 'load', initMap);
+        </script>
         <footer>
             <div class="col span-1-of-2">
                 <ul class="footer-navs">
